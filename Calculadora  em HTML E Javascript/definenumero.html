@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Verificar Número</title>
+</head>
+<body>
+</div>
+<nav class="menu-link">
+    <ul>
+        <li><a href="calculadora.html" class="fix menu-link">CALCULADORA</a></li>
+        <ul class="submenu">
+            <li class="sub"><a href="IMC.html" class="menu-link">IMC</a></li>
+            <li class="sub"><a href="Fibonacci.html" class="menu-link">FIBONACCI</a></li>
+            <li class="sub"><a href="definenumero.html" class="menu-link">DEFINE NUMERO</a></li>
+            <li class="sub"><a href="mediasdenotas.html" class="menu-link">MEDIAS DE NOTAS</a></li>
+            <li class="sub"><a href="verificarnumero.html" class="menu-link">VERIFICAR NÚMERO</a></li>
+        </ul>
+    </li>
+  </ul>
+</nav>
+</div>
+
+<script>
+    function verificaNumero() {
+        var numero = parseFloat(prompt("Digite um número:")); // Solicita ao usuário que insira um número
+        if (isNaN(numero)) {
+            alert("Por favor, insira um número válido.");
+        } else {
+            if (numero > 0) {
+                alert("O número é positivo.");
+            } else if (numero < 0) {
+                alert("O número é negativo.");
+            } else {
+                alert("O número é zero.");
+            }
+        }
+    }
+
+    verificaNumero(); // Chama a função para iniciar a verificação
+</script>
+
+</body>
+</html>
+

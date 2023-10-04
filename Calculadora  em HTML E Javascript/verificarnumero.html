@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Verificar Número Par ou Ímpar</title>
+    <style>
+        /* Estilos para o botão "Calcular" */
+        button {
+            background-color: #010101; /* Cor de fundo azul */
+            color: #fffefe; /* Cor do texto branco */
+            padding: 10px 20px; /* Espaçamento interno */
+            border: none; /* Remover borda */
+            cursor: pointer; /* Cursor do mouse ao passar sobre o botão */
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+</div>
+<nav class="menu-link">
+    <ul>
+        <li><a href="calculadora.html" class="fix menu-link">CALCULADORA</a></li>
+        <ul class="submenu">
+            <li class="sub"><a href="IMC.html" class="menu-link">IMC</a></li>
+            <li class="sub"><a href="Fibonacci.html" class="menu-link">FIBONACCI</a></li>
+            <li class="sub"><a href="definenumero.html" class="menu-link">DEFINE NUMERO</a></li>
+            <li class="sub"><a href="mediasdenotas.html" class="menu-link">MEDIAS DE NOTAS</a></li>
+            <li class="sub"><a href="verificarnumero.html" class="menu-link">VERIFICAR NÚMERO</a></li>
+        </ul>
+    </li>
+  </ul>
+</nav>
+</div>
+    <h1>Verificar se um número é Par ou Ímpar</h1>
+    <p>Insira um número:</p>
+    <input type="text" id="numeroInput">
+    <button onclick="verificarNumero()">Verificar</button>
+    <p id="resultado"></p>
+
+    <script>
+        function defineNumero(numero) {
+            if (numero % 2 === 0) {
+                return "O número é par.";
+            } else {
+                return "O número é ímpar.";
+            }
+        }
+
+        function verificarNumero() {
+            const numeroInput = document.getElementById("numeroInput").value;
+            const resultadoElement = document.getElementById("resultado");
+
+            if (!isNaN(numeroInput)) {
+                const numero = parseInt(numeroInput);
+                const mensagem = defineNumero(numero);
+                resultadoElement.textContent = mensagem;
+            } else {
+                resultadoElement.textContent = "Por favor, insira um número válido.";
+            }
+        }
+    </script>
+</body>
+</html>

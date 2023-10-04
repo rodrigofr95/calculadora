@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Sequência de Fibonacci</title>
+    <style>
+        /* Estilos para o botão "Calcular" */
+        button {
+            background-color: #010101; /* Cor de fundo azul */
+            color: #fffefe; /* Cor do texto branco */
+            padding: 10px 20px; /* Espaçamento interno */
+            border: none; /* Remover borda */
+            cursor: pointer; /* Cursor do mouse ao passar sobre o botão */
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <nav class="menu-link">
+        <ul>
+            <li><a href="calculadora.html" class="fix menu-link">CALCULADORA</a></li>
+            <ul class="submenu">
+                <li class="sub"><a href="IMC.html" class="menu-link">IMC</a></li>
+                <li class="sub"><a href="Fibonacci.html" class="menu-link">FIBONACCI</a></li>
+                <li class="sub"><a href="definenumero.html" class="menu-link">DEFINE NUMERO</a></li>
+                <li class="sub"><a href="mediasdenotas.html" class="menu-link">MEDIAS DE NOTAS</a></li>
+                <li class="sub"><a href="verificarnumero.html" class="menu-link">VERIFICAR NÚMERO</a></li>
+            </ul>
+        </li>
+      </ul>
+    </nav>
+</div>
+<h1>Sequência de Fibonacci</h1>
+<div>
+    <label for="numero-termo">Digite o número de termos desejados:</label>
+    <input type="number" id="numero-termo" placeholder="Digite um número">
+    <button onclick="calcularFibonacci()">Calcular</button>
+</div>
+<ul id="fibonacci-list"></ul>
+
+<script>
+    // Função para calcular a sequência de Fibonacci até o termo desejado
+    function calcularFibonacci() {
+        var fibonacciList = document.getElementById("fibonacci-list");
+        fibonacciList.innerHTML = ""; // Limpa a lista antes de adicionar novos termos
+
+        var numeroTermo = parseInt(document.getElementById("numero-termo").value);
+        var termo1 = 0;
+        var termo2 = 1;
+
+        for (var i = 1; i <= numeroTermo; i++) {
+            var novoTermo = termo1;
+            termo1 = termo2;
+            termo2 = novoTermo + termo2;
+
+            var listItem = document.createElement("li");
+            listItem.textContent = novoTermo;
+            fibonacciList.appendChild(listItem);
+        }
+    }
+</script>
+</body>
+</html>
